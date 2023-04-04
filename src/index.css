@@ -1,13 +1,153 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Mulish&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300;400&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+}
+body p {
+  font-size: 1rem;
+}
+body a {
+  text-decoration: none;
+}
+body li {
+  list-style-type: none;
+}
+
+/* ####################################### START ######################################################## */
+
+.head {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.box {
+  position: relative;
+  margin-top: 5.5rem;
+  max-width: 380px;
+  width: 80% !important;
+  max-height: 500px;
+  height: 80%;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 12px;
+  /* background: #9ab6e1; */
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}
+
+.box {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.noData .img-fluid {
+  max-width: 70px !important;
+  width: 80%;
+  height: auto;
+}
+.box input {
+  padding: 0.8rem 1rem;
+  border-radius: 10rem;
+  border: 1px solid #000000;
+  font-size: 1.1rem;
+  width: 48%;
+}
+
+.box h1 {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+.date h2 {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  font-size: 1.4rem;
+  margin: 0 4rem;
+}
+
+.img-fluid {
+  max-width: 300px;
+  width: 80%;
+}
+
+.head .noData p {
+  font-size: 1.7rem !important;
+}
+.temp {
+  color: #000000;
+}
+
+.animated {
+  animation: left-right 2s ease-in-out infinite alternate-reverse both;
+
+  /* border: 1px solid red; */
+}
+.streetMen {
+  padding: 0.6rem;
+  margin-left: -2rem;
+}
+
+@keyframes left-right {
+  0% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+/* ############################################### MEDIA QUERY ############################################## */
+@media (max-width: 550px) {
+  .box {
+    max-width: 350px;
+    width: 80% !important;
+    max-height: 470px;
+    height: 80%;
+  }
+  .box h1 {
+    margin-bottom: 3rem;
+  }
+  .date h2 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 350px) {
+  .box {
+    max-width: 300px;
+    width: 80% !important;
+    max-height: 420px;
+    height: 80%;
+  }
+  .date h2 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 295px) {
+  .box h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
